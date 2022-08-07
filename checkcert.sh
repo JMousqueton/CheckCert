@@ -37,7 +37,7 @@ Help()
    # Display Help
    echo "Check expiration date of SSL certificat."
    echo
-   echo "Syntax: scriptTemplate [-d|p|D|h]"
+   echo "Syntax: checkcert.sh [-d|p|D|h]"
    echo "options:"
    echo -e "d     Domain name (${Red}Mandatory${Color_Off})."
    echo -e "h     Print this Help."
