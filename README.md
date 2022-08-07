@@ -1,18 +1,14 @@
 
-# 🔒 Check Certificat 
+# 🔎🔒 Check Certificat 
 
 Script to check x.509 certificat of website using openssl 
 
-## Badges
-
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE)
-
-[![Twitter: JMousqueton](https://img.shields.io/twitter/follow/JMousqueton.svg?style=social)](https://twitter.com/JMousqueton)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE)  [![Twitter: JMousqueton](https://img.shields.io/twitter/follow/JMousqueton.svg?style=social)](https://twitter.com/JMousqueton)
 
 ## 📖 Documentation
 
 ### Script options 
-```Shell
+```
 -d <domain>     Domain name (Mandatory).
 -h              Print this Help.
 -D <99>         Number of days (by default 7 days).
@@ -30,7 +26,7 @@ Script to check x.509 certificat of website using openssl
 
 ## 💻 Usage/Examples
 
-```Shell
+```
 $ ./checkcert.sh -d www.julien.io -p 443 -D 15 -v
 ✔ www.julien.io won't expired within 15 days.
 
