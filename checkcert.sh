@@ -125,7 +125,7 @@ status_code=$(curl --write-out %{http_code} --silent --output /dev/null https://
 # Concert Days in seconds for openssl call 
 Seconds=$((DAYS * 86400))
 
-echo | openssl s_client -servername $DOMAIN -connect $DOMAIN:$PORT 2>/dev/null | openssl x509 -noout -enddate -checkend "$Seconds" >/dev/null
+echo | openssl s_client -servername "$DOMAIN" -connect "$DOMAIN:$PORT" 2>/dev/null | openssl x509 -noout -enddate -checkend "$Seconds" >/dev/null
 if [ $? -eq 1 ];
 then
 	echo -e "${Red}\xE2\x9D\x8C${Color_Off} ${Yellow}$DOMAIN${Color_Off} has been expired or will expire within ${Yellow}$DAYS${Color_Off} days."
