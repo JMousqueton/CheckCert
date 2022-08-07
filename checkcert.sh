@@ -2,7 +2,7 @@
 # ==============================================================================
 # Title           : checkcert.sh
 # Description     : This script will check the expiration date of a SSL.
-# Author     		  : Julien Mousqueton @JMousqueton
+# Author          : Julien Mousqueton @JMousqueton
 # Date            : 2022-08-07
 # Version         : 1.0
 # Licences        : GNU 3.0    
