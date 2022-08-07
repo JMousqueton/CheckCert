@@ -1,5 +1,5 @@
 
-# 🔒 Check Certificat 
+# 🔎🔒 Check Certificat 
 
 Script to check x.509 certificat of website using openssl 
 
