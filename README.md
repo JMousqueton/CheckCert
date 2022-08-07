@@ -65,12 +65,10 @@ $ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
 * Twitter: [@JMousqueton](https://twitter.com/JMousqueton)
 * Github: [@JMousqueton](https://github.com/JMousqueton)
 
-
 ## License
 
-[GNU 3.0](LICENSE)
-
+* [GNU 3.0](LICENSE)
 
 ## Acknowledgements
 
- - Ecole 2600 students for the support while coding a sunday evening :) 
+* Ecole 2600 students for the support while coding a sunday evening :) 
