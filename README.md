@@ -26,7 +26,7 @@ Script to check x.509 certificat of website using openssl
 
 ## Usage/Examples
 
-```Shell
+```
 $ ./checkcert.sh -d www.julien.io -p 443 -D 15 -v
 ✔ www.julien.io won't expired within 15 days.
 
