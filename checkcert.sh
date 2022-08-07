@@ -21,15 +21,9 @@ Verbose="false"
 Color_Off='\033[0m'       # Text Reset
 
 # Regular Colors
-Black='\033[0;30m'        # Black
 Red='\033[0;31m'          # Red
 Green='\033[0;32m'        # Green
 Yellow='\033[0;33m'       # Yellow
-Blue='\033[0;34m'         # Blue
-Purple='\033[0;35m'       # Purple
-Cyan='\033[0;36m'         # Cyan
-White='\033[0;37m'        # White
-
 
 ############################################################
 # Help                                                     #
@@ -118,7 +112,7 @@ Openssl_check
 # Check if the domain is responding 
 status_code=$(curl --write-out %{http_code} --silent --output /dev/null https://$DOMAIN:$PORT) 
     if [[ "$status_code" -ne 200 ]] ; then
-        echo -e "${Red}\xE2\x9D\x8C${Color_Off} ${Yellow}$DOMAIN${Color_Off} ne repond pas !!!" 
+        echo -e "${Red}\xE2\x9D\x8C${Color_Off} ${Yellow}$DOMAIN${Color_Off} is not reponding !!!" 
         exit 
     fi   
 
