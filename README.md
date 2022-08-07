@@ -9,7 +9,7 @@ Script to check x.509 certificat of website using openssl
 
 [![Twitter: JMousqueton](https://img.shields.io/twitter/follow/JMousqueton.svg?style=social)](https://twitter.com/JMousqueton)
 
-## Documentation
+## 📖 Documentation
 
 ### Script options 
 ```Shell
@@ -28,7 +28,7 @@ Script to check x.509 certificat of website using openssl
 | 22 | No domain specified or invalid options |
 | 101 | Domain doesn't respond   |
 
-## Usage/Examples
+## 💻 Usage/Examples
 
 ```Shell
 $ ./checkcert.sh -d www.julien.io -p 443 -D 15 -v
@@ -38,7 +38,7 @@ $ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
 ❌ expired.badssl.com has been expired or will expire within 90 days.
 ```
 
-## Roadmap
+## 🗺 Roadmap
 
 | Status | Description |
 |---|---|
@@ -56,19 +56,19 @@ $ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
 | 🔴 | High Priority |
 
 
-## Authors
+## 👤 Authors
 
-👤 **Julien Mousqueton**
+**Julien Mousqueton**
 
 * Website: <https://julien.io>
 * LinkedIn: [Julien Mousqueton](https://linkedin.com/in/julienmousqueton)
 * Twitter: [@JMousqueton](https://twitter.com/JMousqueton)
 * Github: [@JMousqueton](https://github.com/JMousqueton)
 
-## License
+## 📜 License
 
 * [GNU 3.0](LICENSE)
 
-## Acknowledgements
+## ✌🏻 Acknowledgements
 
 * Ecole 2600 students for the support while coding a sunday evening :) 
