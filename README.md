@@ -8,7 +8,7 @@ Script to check x.509 certificat of website using openssl
 ## Documentation
 
 ### Script options 
-```Shell
+```
 -d <domain>     Domain name (Mandatory).
 -h              Print this Help.
 -D <99>         Number of days (by default 7 days).
