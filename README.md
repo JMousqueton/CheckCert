@@ -11,18 +11,36 @@ Script to check x.509 certificat of website using openssl
 
 ## Documentation
 
+### Script options 
 ```Shell
-options:
 -d <domain>     Domain name (Mandatory).
 -h              Print this Help.
 -D <99>         Number of days (by default 7 days).
 -p <443>        Port (by default 443).
 -v              Verbose error message on stderr
 ```
+### return error code 
+| Error Code | Description |
+|---|---|
+| 0 | Not expired |
+| 1 | Expired or will expired within 7 days by default |
+| 3 | Openssl not installed  |
+| 22 | No domain specified or invalid options |
+| 101 | Domain doesn't respond   |
+
+## Usage/Examples
+
+```Shell
+$ ./checkcert.sh -d www.julien.io -p 443 -D 90 -v
+✔ www.julien.io won't expired within 7 days.
+
+$ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
+❌ expired.badssl.com has been expired or will expire within 7 days.
+```
 
 ## Roadmap
 
-| Status | Tâche |
+| Status | Description |
 |---|---|
 | ✅ |~~Add "Standard" Linux error code~~|
 | ✅ |~~Disable SSL check on curl for website testing~~|
@@ -36,17 +54,6 @@ options:
 | 🟢 | Low priority | 
 | 🟡 | Medium priority |
 | 🔴 | High Priority |
-
-
-## Usage/Examples
-
-```Shell
-$ ./checkcert.sh -d www.julien.io -p 443 -D 90 -v
-✔ www.julien.io won't expired within 7 days.
-
-$ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
-❌ expired.badssl.com has been expired or will expire within 7 days.
-```
 
 
 ## Authors
