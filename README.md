@@ -1,5 +1,5 @@
 
-# Check Certificat 
+# 🔒 Check Certificat 
 
 Script to check x.509 certificat of website using openssl 
 
@@ -31,11 +31,11 @@ Script to check x.509 certificat of website using openssl
 ## Usage/Examples
 
 ```Shell
-$ ./checkcert.sh -d www.julien.io -p 443 -D 90 -v
-✔ www.julien.io won't expired within 7 days.
+$ ./checkcert.sh -d www.julien.io -p 443 -D 15 -v
+✔ www.julien.io won't expired within 15 days.
 
 $ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
-❌ expired.badssl.com has been expired or will expire within 7 days.
+❌ expired.badssl.com has been expired or will expire within 90 days.
 ```
 
 ## Roadmap
