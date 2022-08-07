@@ -1,7 +1,7 @@
 #!/bin/bash -       
 # ==============================================================================
 # Title           : checkcert.sh
-# Description     : This script will check the expiration date of a SSL.
+# Description     : This script will check the expiration date of a SSL certificat.
 # Author          : Julien Mousqueton @JMousqueton
 # Date            : 2022-08-07
 # Version         : 1.0
