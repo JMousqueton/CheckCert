@@ -11,7 +11,7 @@
 #                     - 1   : Certificat expired or will expire within 7 days 
 #                             or the number of days specified with option -D 
 #                     - 0   : Everything is good :) 
-#                     - 2   : opensll not installed 
+#                     - 3   : opensll not installed 
 #                     - 22  : No domain specified or invalid option 
 #                     - 101 : Domain doesn't respond 
 # ==============================================================================
@@ -68,6 +68,7 @@ Openssl_check ()
   else
     if [[ $OSTYPE == 'darwin'* ]]; then 
         echoerr "MacOS : you should check manually if openssl is installed" 
+        exit 3
     else
       echoerr "Installing openssl..."
       sudo apt-get install -q -y openssl
