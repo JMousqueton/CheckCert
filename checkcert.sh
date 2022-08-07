@@ -12,7 +12,7 @@
 #                             or the number of days specified with option -D 
 #                     - 0   : Everything is good :) 
 #                     - 3   : opensll not installed 
-#                     - 22  : No domain specified or invalid option 
+#                     - 22  : No domain specified or invalid options 
 #                     - 101 : Domain doesn't respond 
 # ==============================================================================
 
