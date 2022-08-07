@@ -43,7 +43,7 @@ Help()
    echo -e "h     Print this Help."
    echo -e "D     Number of days (by default 7 days)."
    echo -e "p     Port (by default 443)."
-   echo -e "v     Verbose error message on sterr"
+   echo -e "v     Verbose error message on stderr"
    echo
 }
 
@@ -116,7 +116,7 @@ fi
 Openssl_check
 
 # Check if the domain is responding 
-status_code=$(curl --write-out %{http_code} --silent --output /dev/null "https://$DOMAIN:$PORT") 
+status_code=$(curl  --insecure  --write-out %{http_code} --silent --output /dev/null "https://$DOMAIN:$PORT") 
     if [[ "$status_code" -ne 200 ]] ; then
         echo -e "${Red}\xE2\x9D\x8C${Color_Off} ${Yellow}$DOMAIN${Color_Off} is not reponding !!!" 
         exit 101
