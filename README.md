@@ -42,7 +42,7 @@ options:
 
 ```Shell
 $ ./checkcert.sh -d www.julien.io -p 443 -D 90 -v
-✔ www.julien.io won\'t expired within 7 days.
+✔ www.julien.io won't expired within 7 days.
 
 $ ./checkcert.sh -d expired.badssl.com -p 443 -D 90 -v
 ❌ expired.badssl.com has been expired or will expire within 7 days.
