@@ -43,7 +43,7 @@ Help()
    echo -e "h     Print this Help."
    echo -e "D     Number of days (by default 7 days)."
    echo -e "p     Port (by default 443)."
-   ecno -e "v     Verbose error message on sterr"
+   echo -e "v     Verbose error message on sterr"
    echo
 }
 
