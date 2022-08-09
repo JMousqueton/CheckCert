@@ -4,14 +4,14 @@
 # Description     : This script will check the expiration date of a SSL certificat.
 # Author          : Julien Mousqueton @JMousqueton
 # Date            : 2022-08-07
-# Version         : 1.0
+# Version         : 1.1
 # Licences        : GNU 3.0    
 # Usage	      	  : bash checkcert.sh -d <domain>
 # Notes           : this Script uses "standard" exit codes : 
 #                     - 1   : Certificat expired or will expire within 7 days 
 #                             or the number of days specified with option -D 
 #                     - 0   : Everything is good :) 
-#                     - 3   : opensll not installed 
+#                     - 3   : opensll or curl not installed 
 #                     - 22  : No domain specified or invalid options 
 #                     - 101 : Domain doesn't respond 
 # ==============================================================================
@@ -81,6 +81,27 @@ Openssl_check ()
   fi
 }
 
+Curl_check ()
+{
+  echoerr "Checking for curl..."
+  if command -v curl > /dev/null; then
+    echoerr "Detected curl..."
+  else
+    if [[ $OSTYPE == 'darwin'* ]]; then 
+        echoerr "MacOS : you should check manually if curl is installed" 
+        exit 3
+    else
+      echoerr "Installing curl..."
+      sudo apt-get install -q -y curl
+      if [ "$?" -ne "0" ]; then
+        echoerr "Unable to install curl ! Your base system has a problem; please check your default OS's package repositories because curl should work."
+        echoerr "Repository installation aborted."
+        exit 3
+      fi
+    fi
+  fi
+}
+
 ############################################################
 # Main                                                     #
 ############################################################
@@ -114,6 +135,10 @@ fi
 
 # Call Openssl_check()
 Openssl_check
+
+# Call Curl_check()
+Curl_check
+
 
 # Check if the domain is responding 
 status_code=$(curl  --insecure  --write-out %{http_code} --silent --output /dev/null "https://$DOMAIN:$PORT") 
