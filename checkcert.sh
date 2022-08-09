@@ -141,6 +141,7 @@ Curl_check
 
 
 # Check if the domain is responding 
+echoerr "Checking for $DOMAIN:PORT to respond ..."
 status_code=$(curl  --insecure  --write-out %{http_code} --silent --output /dev/null "https://$DOMAIN:$PORT") 
     if [[ "$status_code" -ne 200 ]] ; then
         echo -e "${Red}\xE2\x9D\x8C${Color_Off} ${Yellow}$DOMAIN${Color_Off} is not reponding !!!" 
